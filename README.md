@@ -82,3 +82,24 @@ struct Reminder {
   let priority: Priority
 }
 ```
+
+## Installation
+
+You can add StructuredQueriesTagged to an Xcode project by adding it to your project as a package.
+
+> https://github.com/mhayes853/structured-queries-tagged
+
+If you want to use StructuredQueriesTagged in a [SwiftPM](https://swift.org/package-manager/) project,
+it's as simple as adding it to your `Package.swift`:
+
+``` swift
+dependencies: [
+  .package(url: "https://github.com/mhayes853/structured-queries-tagged", from: "0.1.0"),
+]
+```
+
+And then adding the product to any target that needs access to the library:
+
+```swift
+.product(name: "StructuredQueriesTagged", package: "structured-queries-tagged"),
+```
